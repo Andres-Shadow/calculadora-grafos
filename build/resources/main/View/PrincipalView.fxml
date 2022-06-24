@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="522.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControllerPpalView">
+   <children>
+      <SplitPane dividerPositions="0.48" prefHeight="522.0" prefWidth="727.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="449.0" prefWidth="393.0">
+               <children>
+                  <Label layoutX="21.0" layoutY="224.0" text="Grafos" />
+                  <Label layoutX="21.0" layoutY="325.0" text="Trayectorias" />
+                  <Button layoutX="20.0" layoutY="349.0" mnemonicParsing="false" onAction="#Shumbell" text="Shumbell" />
+                  <Button layoutX="102.0" layoutY="349.0" mnemonicParsing="false" text="Floyd Warshall" />
+                  <Button layoutX="205.0" layoutY="349.0" mnemonicParsing="false" text="Deijkstra" />
+                  <Button layoutX="17.0" layoutY="252.0" mnemonicParsing="false" onAction="#conexidad" text="Conexidad" />
+                  <Button layoutX="101.0" layoutY="252.0" mnemonicParsing="false" onAction="#warshall" text="Warshall" />
+                  <Button layoutX="182.0" layoutY="252.0" mnemonicParsing="false" onAction="#productoLogicoSimple" text="Producto logico simple" />
+                  <Button layoutX="17.0" layoutY="287.0" mnemonicParsing="false" onAction="#productoLogico" text="Producto logico completo" />
+                  <TextArea fx:id="areaMatriz" layoutX="30.0" layoutY="96.0" prefHeight="94.0" prefWidth="237.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextArea>
+                  <Label layoutX="25.0" layoutY="42.0" text="Cantidad de nodos" />
+                  <TextField fx:id="txtCantNodos" layoutX="132.0" layoutY="38.0" prefHeight="25.0" prefWidth="41.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <Label layoutX="28.0" layoutY="79.0" text="Matriz de relaciones" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="335.0" prefWidth="337.0">
+               <children>
+                  <GridPane prefHeight="520.0" prefWidth="374.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="337.0" minHeight="10.0" prefHeight="337.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Resultado">
+                           <padding>
+                              <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                           </padding>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="25.0" left="100.0" right="40.0" top="25.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextArea fx:id="areaResultado" editable="false" focusTraversable="false" pickOnBounds="false" prefHeight="369.0" prefWidth="325.0" wrapText="true" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                        </TextArea>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
